@@ -5,7 +5,7 @@ tv1 channel is 30 and volume level is 3
 tv2 channel is 3 and volume level is 2
 
 
-- INSTANCE VARIABBLES
+- INSTANCE VARIABLES
 channel : int
 volume_level: int
 on: bool
@@ -28,14 +28,14 @@ DESCRIPTIONS
 The current channel (1 to 120) of this TV
 The current channel volume level ( 1 to 7) of this  TV
 Indicates whether this TV is on/off
-COnstruct a default TV object 
+Construct a default TV object 
 Turn on this TV
 Turn off this TV
 Returns the channel for this TV
 Set a new channel for this TV 
-gets the volume level for this TV
+Gets the volume level for this TV
 Sets a new volume for this TV
-INcrease the channel by 1 
+Increase the channel by 1 
 Decrease the channel by 1
 Increase the volume level by 1 
-Decrease the volume leve by 1
+Decrease the volume level by 1
