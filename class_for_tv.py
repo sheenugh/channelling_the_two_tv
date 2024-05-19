@@ -19,7 +19,7 @@ class TV:
         self.on = False # - Making the "turning off" of the TV as "False" or equivalent to "False."
     
     def get_channel(self):
-        return self.channel # - Setting in this kind of approach to access the set channel value in the instance variable.
+        return self.channel # - Setting in this kind of approach to access the set channel value in the instance variable. Simply , it will return to the default channel of the TV.
     
     def set_channel(self, channel): # - Putting the 'channel' para maaccess at madetermine ng if else ang inputted int doon sa object parameter.
         if 1<= channel <= 120:
@@ -27,7 +27,8 @@ class TV:
         else: 
             raise ValueError("The channel must be between 1 to 120. Please input a number between this number.")
     
-    def get_volume(): int
+    def get_volume(self):
+        return self.volume_level # - Gets or return the volume of the TV, where volume = 1.
     
     def set_volume(volume_level: int): None
     
