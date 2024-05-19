@@ -6,16 +6,17 @@
 # - Class name
 class TV:
     # - Constructor
-    def __init__(self, channel, volume_level, on):
+    def __init__(self, channel = 1, volume_level = 1, on = False):
     # - Instance variables
         self.channel = channel
         self.volume_level = volume_level
         self.on = on
     
-    def turn_on(): None
+    def turn_on():
+        self.on = True # - Making the "turning on" of the TV as "True" or equivalent to "True."
 
-    def turn_off(): None
-
+    def turn_off():
+        self.on = False # - Making the "turning off" of the TV as "False" or equivalent to "False."
     def get_channel(): int
     
     def set_channel(channel: int): None
