@@ -23,14 +23,16 @@ class TV:
     
     def set_channel(self, channel): # - Putting the 'channel' para maaccess at madetermine ng if else ang inputted int doon sa object parameter.
         if 1<= channel <= 120:
-            self.channel = channel
+            self.channel = channel # - Setting this kind of approach will automatically produce an output that is equal to the number that has been set to the tv's channel.
         else: 
             raise ValueError("The channel must be between 1 to 120. Please input a number between this number.")
     
     def get_volume(self):
         return self.volume_level # - Gets or return the volume of the TV, where volume = 1.
     
-    def set_volume(volume_level: int): None
+    def set_volume(self, volume_level): 
+        if 1<= volume_level <=7:
+            self.volume_level = volume_level
     
     def channel_up(): None
     
