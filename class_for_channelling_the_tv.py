@@ -2,11 +2,10 @@
 
 # ========== PSEUDO CODE =========
 # || IMPORTS ||
-
+import tkinter as tk 
+from tkinter import messagebox
 
 # || ACTUAL CODES || 
-
-
 # - Class name.
 class TV:
     # - Constructor.
@@ -27,15 +26,15 @@ class TV:
 
     # - Instance Method: Get the channel.
     def get_channel(self):
-        return self.channel # - Setting in this kind of approach to access the set channel value in the instance variable. Simply , it will return to the default channel of the TV.
+        return self.channel # - Setting in this kind of approach to access the set channel(1) value in the instance variable. Simply , it will return to the default channel(1) of the TV.
     
     # - Instance Method: Set the channel.
     def set_channel(self, channel): # - Putting the 'channel' para maaccess at madetermine ng if else ang sinet na int doon sa object parameter.
-        if 1<= channel <= 120:
+        if 1 <= channel <= 120:
             self.channel = channel # - Setting this kind of approach will automatically produce an output that is equal to the number that has been set to the tv's channel in the test driver program.
-        else: 
-            raise ValueError("The channel must be between 1 to 120. Please input a number between this number.")
-        
+        else:
+            messagebox.showerror("ERROR", "The channel must be between 1 to 120. Please set a number between this number.")
+    
     # - Instance Method: Get the volume.
     def get_volume(self):
         return self.volume_level # - Gets or return the volume of the TV, where volume = 1.
@@ -45,7 +44,7 @@ class TV:
         if 1<= volume_level <=7:
             self.volume_level = volume_level # - self.volume_level will now equal to the value that has been set on the test driver program.
         else:
-            raise ValueError("Error. Please input a number between 1 to 7.")
+            messagebox.showerror("ERROR", "The channel must be between 1 to 120. Please input a number between this number.")
     
     # - Instance Method: Channel up.
     def channel_up(self): 
@@ -66,4 +65,5 @@ class TV:
     def volume_down(self): 
         if self.volume_level > 1:
             self.volume_level -= 1 # - Setting this because if ever the set volume level is below 7, then it will still equal to the default value.
+    
     
