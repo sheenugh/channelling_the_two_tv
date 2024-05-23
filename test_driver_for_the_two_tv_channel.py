@@ -13,8 +13,9 @@ import tkinter as tk
 # || ACTUAL CODES || 
 # - Class name 
 class TestTV(tk.Tk):
-    # - Constructor.
-    def __init__(self, tv1_channel, tv1_volume, tv2_channel, tv2_volume, *args, **kwargs):
+# >> This category is for the tkinter window, such as buttons, TV frame, displayed output, and bg image. <<
+    def __init__(self, tv1_channel, tv1_volume, tv2_channel, tv2_volume, *args, **kwargs): # - Constructor.
+        # - Using the try and except for the tkinter window for the purpose of to appear or destroy if the channel will be changed in the range of 1>channel<120 and the volume 1>volume<7.
         try:
             # - Instance variables.
             super().__init__(*args, **kwargs)
@@ -37,7 +38,7 @@ class TestTV(tk.Tk):
         except:
             None
         
-    # - Using the try and except for the tkinter window for the purpose of to appear or destroy if the channel will be changed in the range of 1>channel<120 and the volume 1>volume<7.
+    
 
     
     
@@ -46,12 +47,18 @@ class TestTV(tk.Tk):
     # - Volume control buttons
     # - Display the current channel
     
-    # - Initializing TV settings
+    # - Initializing TV settings.
     def initialize_tv_settings(self):
         self.tv1.set_channel(self.tv1_channel)
         self.tv1.set_volume(self.tv1_volume)
         self.tv2.set_channel(self.tv2_channel)
         self.tv2.set_volume(self.tv2_volume)
+        
+# >> This category is for the instance methods << 
+    # - Instance method channel up for tv1 and tv2.
+    # - Instance method channel down for tv1 and tv2.
+    # - Instance method volume up for tv1 and tv2.
+    # - Instance method volume down for tv1 and tv2.
 
 # - Operator
 if __name__ == "__main__":
