@@ -23,9 +23,10 @@ class TestTV:
         tv2.set_channel(3)
         tv2.set_volume(2)
         
+        print(f"tv1 channel is {tv1.get_channel()} and volume level is {tv1.get_volume()}")
+        print(f"tv2 channel is {tv2.get_channel()} and volume level is {tv2.get_volume()}")
         
-
-
-if __name__ == "__test_driver_for_the_two_tv_channel__":
+        
+if __name__ == "__main__":
     test_tv = TestTV()
-    test_tv.test_driver_for_the_two_tv_channel()
+    test_tv.channelling_tv1_and_tv2()
