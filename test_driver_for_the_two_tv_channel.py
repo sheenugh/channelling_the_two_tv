@@ -23,13 +23,13 @@ class TestTV(tk.Tk):
             self.tv1 = TV() # Object 1
             self.tv2 = TV() # Object 2
             self.initialize_tv_settings()
-            self.title("TV Controller")
+            self.title("Television")
             self.configure(bg="#2c3e50")
             
             # - TV Frame.
-            tv_frame = tk.Frame(self, bg="#34495e", padx=150, pady=150)
+            tv_frame = tk.Frame(self, bg="#34495e", padx=75, pady=75)
             tv_frame.pack(pady=20, padx =20)
-            
+        
             # - Volume control buttons.
             tk.Button(tv_frame, text="+", command=self.volume_up, bg="#e74c3c", fg="white", font=("Helvetica", 16, "bold")).grid(row=1, column=1, padx=(20,0))
             tk.Button(tv_frame, text="-", command=self.volume_down, bg="#e74c3c", fg="white", font=("Helvetica", 16, "bold")).grid(row=2, column=1, padx=(20,0))
@@ -45,6 +45,11 @@ class TestTV(tk.Tk):
             self.status_label.place(relx=0.5, rely=0.5, anchor=tk.CENTER)
             
             # - Load TV image.
+            tv_image = tk.PhotoImage(file="television.png")
+            tv_image_label = tk.Label(tv_frame, image=tv_image, bg="#34495e")
+            tv_image_label.image = tv_image
+            tv_image_label.grid(row=0, column=0, columnspan=2)
+
     
         except:
             None
