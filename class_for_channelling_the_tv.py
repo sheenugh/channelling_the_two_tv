@@ -18,8 +18,13 @@ class TV:
     
     # - Instance Methods.
     # - Instance Method: Turning on the TV.
+    def turn_on(self):
+        self.on = True # - Making the "turning on" of the TV as "True" or equivalent to "True."
     
-# - Instance Method: Turning off the TV.
+    # - Instance Method: Turning off the TV.
+    def turn_off(self):
+        self.on = False # - Making the "turning off" of the TV as "False" or equivalent to "False."
+
 # - Instance Method: Get the channel.
 # - Instance Method: Set the channel.
 # - Instance Method: Get the volume.
