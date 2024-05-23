@@ -53,9 +53,17 @@ class TV:
             self.channel += 1 # - Setting this because if ever the set channel is above 120, then it will still equal to the default value.
     
     # - Instance Method: Channel down.
-     def channel_down(self): 
+    def channel_down(self): 
         if self.channel > 1:
             self.channel -= 1 # - Setting this because if ever the set channel is below 1, then it will still equal to the default value.
     
     # - Instance Method: Volume up.
+    def volume_up(self): 
+        if self.volume_level < 7:
+            self.volume_level += 1 # - Setting this because if ever the set volume level is above 7, then it will still equal to the default value.
+    
     # - Instance Method: Volume down.
+    def volume_down(self): 
+        if self.volume_level > 1:
+            self.volume_level -= 1 # - Setting this because if ever the set volume level is below 7, then it will still equal to the default value.
+    
