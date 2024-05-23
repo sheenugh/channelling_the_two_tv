@@ -40,15 +40,13 @@ class TestTV(tk.Tk):
             
         except:
             None
-        
-    
+            
 
-    
-    
     # - Load TV image.
     
     
     # - Display the current channel
+    
     
     # - Initializing TV settings.
     def initialize_tv_settings(self):
@@ -59,7 +57,14 @@ class TestTV(tk.Tk):
         
 # >> This category is for the instance methods << 
     # - Instance method channel up for tv1 and tv2.
+    def channel_up(self):
+        self.tv1.channel_up()
+        self.tv2.channel_up()
+        
     # - Instance method channel down for tv1 and tv2.
+    def channel_down(self):
+        self.tv1.channel_down()
+        self.tv2.channel_down()
     # - Instance method volume up for tv1 and tv2.
     # - Instance method volume down for tv1 and tv2.
 
