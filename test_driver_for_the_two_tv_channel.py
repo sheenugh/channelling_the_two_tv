@@ -16,6 +16,7 @@ class TestTV(tk.Tk):
     # - Constructor.
     def __init__(self, tv1_channel, tv1_volume, tv2_channel, tv2_volume, *args, **kwargs):
         try:
+            # - Instance variables.
             super().__init__(*args, **kwargs)
             self.tv1_channel = tv1_channel
             self.tv1_volume = tv1_volume
@@ -26,13 +27,19 @@ class TestTV(tk.Tk):
             self.initialize_tv_settings()
             self.title("TV Controller")
             self.configure(bg="#2c3e50")
+            
+            # - TV Frame.
+            tv_frame = tk.Frame(self, bg="#34495e", padx=30, pady=30)
+            tv_frame.pack(pady=20)
+
+            
         except:
             None
         
     # - Using the try and except for the tkinter window for the purpose of to appear or destroy if the channel will be changed in the range of 1>channel<120 and the volume 1>volume<7.
 
-    # - Instance variables.
-    # - TV Frame.
+    
+    
     # - Load TV image.
     # - Channel control buttons
     # - Volume control buttons
