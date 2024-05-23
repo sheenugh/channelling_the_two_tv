@@ -65,8 +65,17 @@ class TestTV(tk.Tk):
     def channel_down(self):
         self.tv1.channel_down()
         self.tv2.channel_down()
+        
     # - Instance method volume up for tv1 and tv2.
+    def volume_up(self):
+        self.tv1.volume_up()
+        self.tv2.volume_up()
+    
     # - Instance method volume down for tv1 and tv2.
+    def volume_down(self):
+        self.tv1.volume_down()
+        self.tv2.volume_down()
+    
 
 # - Operator
 if __name__ == "__main__":
