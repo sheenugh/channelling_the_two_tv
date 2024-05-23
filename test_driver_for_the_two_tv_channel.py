@@ -98,8 +98,8 @@ class TestTV(tk.Tk):
 
     # - Instance method update status.
     def update_status(self):
-        self.status_label.config(text=f"tv1 channel is {self.tv1.get_channel()} and volume level is {self.tv1.get_volume()}\n"
-                                    f"tv2 channel is {self.tv2.get_channel()} and volume level is {self.tv2.get_volume()}")
+        self.status_label.config(text=f"TV1's channel is {self.tv1.get_channel()} and volume level is {self.tv1.get_volume()}\n"
+                                    f"TV2's channel is {self.tv2.get_channel()} and volume level is {self.tv2.get_volume()}")
     
 
 # - Operator
