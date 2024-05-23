@@ -44,13 +44,13 @@ class TestTV(tk.Tk):
                                                     bg="#2c3e50", fg="white", font=("Helvetica", 12))
             self.status_label.place(relx=0.5, rely=0.5, anchor=tk.CENTER)
             
-            
+            # - Load TV image.
+    
         except:
             None
 
         
 
-    # - Load TV image.
     
     
     
@@ -67,27 +67,34 @@ class TestTV(tk.Tk):
     def channel_up(self):
         self.tv1.channel_up()
         self.tv2.channel_up()
+        self.update_status()
         
 
     # - Instance method channel down for tv1 and tv2.
     def channel_down(self):
         self.tv1.channel_down()
         self.tv2.channel_down()
+        self.update_status()
         
 
     # - Instance method volume up for tv1 and tv2.
     def volume_up(self):
         self.tv1.volume_up()
         self.tv2.volume_up()
+        self.update_status()
         
-    
+
     # - Instance method volume down for tv1 and tv2.
     def volume_down(self):
         self.tv1.volume_down()
         self.tv2.volume_down()
+        self.update_status()
         
 
     # - Instance method update status.
+    def update_status(self):
+        self.status_label.config(text=f"tv1 channel is {self.tv1.get_channel()} and volume level is {self.tv1.get_volume()}\n"
+                                    f"tv2 channel is {self.tv2.get_channel()} and volume level is {self.tv2.get_volume()}")
     
 
 # - Operator
