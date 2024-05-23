@@ -1,13 +1,10 @@
 # TEST DRIVER PROGRAM FOR TESTING THE TV
 
+
 # ========== PSEUDO CODE =========
 # || IMPORTS ||
 from class_for_channelling_the_tv import TV
 import tkinter as tk 
-
-
-
-# || PACKAGES/LIBRARY ||
 
 
 # || ACTUAL CODES || 
@@ -33,6 +30,9 @@ class TestTV(tk.Tk):
             tv_frame = tk.Frame(self, bg="#34495e", padx=20, pady=20)
             tv_frame.pack(pady=20)
             
+            # - Volume control buttons
+            tk.Button(tv_frame, text="+", command=self.volume_up, bg="#e74c3c", fg="white", font=("Helvetica", 16, "bold")).grid(row=1, column=1, padx=(20,0))
+            tk.Button(tv_frame, text="-", command=self.volume_down, bg="#e74c3c", fg="white", font=("Helvetica", 16, "bold")).grid(row=2, column=1, padx=(20,0))
             
             
         except:
@@ -44,7 +44,7 @@ class TestTV(tk.Tk):
     
     # - Load TV image.
     
-    # - Volume control buttons
+    
     # - Display the current channel
     
     # - Initializing TV settings.
