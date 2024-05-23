@@ -29,9 +29,10 @@ class TestTV(tk.Tk):
             self.configure(bg="#2c3e50")
             
             # - TV Frame.
-            tv_frame = tk.Frame(self, bg="#34495e", padx=30, pady=30)
+            tv_frame = tk.Frame(self, bg="#34495e", padx=20, pady=20)
             tv_frame.pack(pady=20)
-
+            
+            
             
         except:
             None
@@ -41,11 +42,18 @@ class TestTV(tk.Tk):
     
     
     # - Load TV image.
-    # - Channel control buttons
+    
     # - Volume control buttons
     # - Display the current channel
-    # - Operator
     
+    # - Initializing TV settings
+    def initialize_tv_settings(self):
+        self.tv1.set_channel(self.tv1_channel)
+        self.tv1.set_volume(self.tv1_volume)
+        self.tv2.set_channel(self.tv2_channel)
+        self.tv2.set_volume(self.tv2_volume)
+
+# - Operator
 if __name__ == "__main__":
     app = TestTV(tv1_channel=30, tv1_volume=3, tv2_channel=3, tv2_volume=2)
     app.mainloop()
