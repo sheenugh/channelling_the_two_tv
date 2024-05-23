@@ -26,17 +26,17 @@ class TestTV(tk.Tk):
             self.title("Television")
             self.configure(bg="#2c3e50")
             
-            # - TV Frame.
-            tv_frame = tk.Frame(self, bg="#34495e", padx=75, pady=75)
-            tv_frame.pack(pady=20, padx =20)
+            # - Inner Frame.
+            inner_frame = tk.Frame(self, bg="#34495e", padx=75, pady=75)
+            inner_frame.pack(pady=20, padx =20)
         
             # - Volume control buttons.
-            tk.Button(tv_frame, text="+", command=self.volume_up, bg="#e74c3c", fg="white", font=("Helvetica", 16, "bold")).grid(row=1, column=1, padx=(20,0))
-            tk.Button(tv_frame, text="-", command=self.volume_down, bg="#e74c3c", fg="white", font=("Helvetica", 16, "bold")).grid(row=2, column=1, padx=(20,0))
+            tk.Button(inner_frame, text="+", command=self.volume_up, bg="#e74c3c", fg="white", font=("Helvetica", 16, "bold")).grid(row=1, column=1, padx=(20,0))
+            tk.Button(inner_frame, text="-", command=self.volume_down, bg="#e74c3c", fg="white", font=("Helvetica", 16, "bold")).grid(row=2, column=1, padx=(20,0))
             
             # - Channel control buttons.
-            tk.Button(tv_frame, text="↑", command=self.channel_up, bg="#2ecc71", fg="white", font=("Helvetica", 16, "bold")).grid(row=1, column=0)
-            tk.Button(tv_frame, text="↓", command=self.channel_down, bg="#2ecc71", fg="white", font=("Helvetica", 16, "bold")).grid(row=2, column=0)
+            tk.Button(inner_frame, text="↑", command=self.channel_up, bg="#2ecc71", fg="white", font=("Helvetica", 16, "bold")).grid(row=1, column=0)
+            tk.Button(inner_frame, text="↓", command=self.channel_down, bg="#2ecc71", fg="white", font=("Helvetica", 16, "bold")).grid(row=2, column=0)
             
             # - Display the current channel
             self.status_label = tk.Label(self, text=f"tv1 channel is {self.tv1.get_channel()} and volume level is {self.tv1.get_volume()}\n"
@@ -44,22 +44,15 @@ class TestTV(tk.Tk):
                                                     bg="#2c3e50", fg="white", font=("Helvetica", 12))
             self.status_label.place(relx=0.5, rely=0.5, anchor=tk.CENTER)
             
-            # - Load TV image.
+            # - Bg TV image.
             tv_image = tk.PhotoImage(file="television.png")
-            tv_image_label = tk.Label(tv_frame, image=tv_image, bg="#34495e")
+            tv_image_label = tk.Label(inner_frame, image=tv_image, bg="#34495e")
             tv_image_label.image = tv_image
             tv_image_label.grid(row=0, column=0, columnspan=2)
-
-    
+            
         except:
             None
 
-        
-
-    
-    
-    
-    
     # - Initializing TV settings.
     def initialize_tv_settings(self):
         self.tv1.set_channel(self.tv1_channel)
