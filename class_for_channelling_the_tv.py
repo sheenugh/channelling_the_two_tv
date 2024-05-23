@@ -48,6 +48,14 @@ class TV:
             raise ValueError("Error. Please input a number between 1 to 7.")
     
     # - Instance Method: Channel up.
+    def channel_up(self): 
+        if self.channel < 120:
+            self.channel += 1 # - Setting this because if ever the set channel is above 120, then it will still equal to the default value.
+    
     # - Instance Method: Channel down.
+     def channel_down(self): 
+        if self.channel > 1:
+            self.channel -= 1 # - Setting this because if ever the set channel is below 1, then it will still equal to the default value.
+    
     # - Instance Method: Volume up.
     # - Instance Method: Volume down.
