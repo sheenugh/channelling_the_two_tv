@@ -5,6 +5,7 @@
 # || IMPORTS ||
 from class_for_channelling_the_tv import TV
 import tkinter as tk 
+from PIL import Image, ImageTk
 
 
 # || ACTUAL CODES || 
@@ -24,15 +25,23 @@ class TestTV(tk.Tk):
             self.tv2 = TV() # Object 2
             self.initialize_tv_settings()
             self.title("Television")
-            self.configure(bg="#2c3e50")
+            
+            # - Outer background image.
+            bg_image = Image.open("gojo_main_bg.png")  # Replace "background_image.png" with your image file
+            bg_photo = ImageTk.PhotoImage(bg_image)
+            # Create a label widget to display the background image
+            bg_label = tk.Label(self, image=bg_photo)
+            bg_label.image = bg_photo
+            # Place the label at the back of all other widgets
+            bg_label.place(x=0, y=0, relwidth=1, relheight=1)
             
             # - Inner Frame.
-            inner_frame = tk.Frame(self, bg="#34495e", padx=75, pady=75)
-            inner_frame.pack(pady=20, padx =20)
+            inner_frame = tk.Frame(self, bg = "#34495e", padx= 70, pady= 10, highlightbackground="white", highlightthickness=2)
+            inner_frame.pack(pady=120, padx =120)
         
             # - Volume control buttons.
-            tk.Button(inner_frame, text="+", command=self.volume_up, bg="#e74c3c", fg="white", font=("Helvetica", 16, "bold")).grid(row=1, column=1, padx=(20,0))
-            tk.Button(inner_frame, text="-", command=self.volume_down, bg="#e74c3c", fg="white", font=("Helvetica", 16, "bold")).grid(row=2, column=1, padx=(20,0))
+            tk.Button(inner_frame, text="+", command=self.volume_up, bg="#e74c3c", fg="white", font=("Helvetica", 16, "bold")).grid(row=1, column=1, padx=(17,0))
+            tk.Button(inner_frame, text="-", command=self.volume_down, bg="#e74c3c", fg="white", font=("Helvetica", 16, "bold")).grid(row=2, column=1, padx=(17,0))
             
             # - Channel control buttons.
             tk.Button(inner_frame, text="↑", command=self.channel_up, bg="#2ecc71", fg="white", font=("Helvetica", 16, "bold")).grid(row=1, column=0)
@@ -46,7 +55,7 @@ class TestTV(tk.Tk):
             
             # - Bg TV image.
             tv_image = tk.PhotoImage(file="television.png")
-            tv_image_label = tk.Label(inner_frame, image=tv_image, bg="#34495e")
+            tv_image_label = tk.Label(inner_frame, image=tv_image, bg = "#34495e")
             tv_image_label.image = tv_image
             tv_image_label.grid(row=0, column=0, columnspan=2)
             
@@ -74,7 +83,6 @@ class TestTV(tk.Tk):
         self.tv1.channel_down()
         self.tv2.channel_down()
         self.update_status()
-        
 
     # - Instance method volume up for tv1 and tv2.
     def volume_up(self):
@@ -82,13 +90,11 @@ class TestTV(tk.Tk):
         self.tv2.volume_up()
         self.update_status()
         
-
     # - Instance method volume down for tv1 and tv2.
     def volume_down(self):
         self.tv1.volume_down()
         self.tv2.volume_down()
         self.update_status()
-        
 
     # - Instance method update status.
     def update_status(self):
