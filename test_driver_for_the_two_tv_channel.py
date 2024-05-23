@@ -41,7 +41,7 @@ class TestTV(tk.Tk):
             # - Display the current channel
             self.status_label = tk.Label(self, text=f"tv1 channel is {self.tv1.get_channel()} and volume level is {self.tv1.get_volume()}\n"
                                                     f"tv2 channel is {self.tv2.get_channel()} and volume level is {self.tv2.get_volume()}", 
-                                                    bg="#2c3e50", fg="white", font=("Helvetica", 12))
+                                                    bg="#181e31", fg="white", font=("Helvetica", 10))
             self.status_label.place(relx=0.5, rely=0.5, anchor=tk.CENTER)
             
             # - Bg TV image.
@@ -50,8 +50,9 @@ class TestTV(tk.Tk):
             tv_image_label.image = tv_image
             tv_image_label.grid(row=0, column=0, columnspan=2)
             
-        except:
-            None
+        except ValueError:
+            self.destroy()
+            
 
     # - Initializing TV settings.
     def initialize_tv_settings(self):
