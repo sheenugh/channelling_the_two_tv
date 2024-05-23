@@ -48,8 +48,8 @@ class TestTV(tk.Tk):
             tk.Button(inner_frame, text="↓", command=self.channel_down, bg="#2ecc71", fg="white", font=("Helvetica", 16, "bold")).grid(row=2, column=0)
             
             # - Display the current channel
-            self.status_label = tk.Label(self, text=f"tv1 channel is {self.tv1.get_channel()} and volume level is {self.tv1.get_volume()}\n"
-                                                    f"tv2 channel is {self.tv2.get_channel()} and volume level is {self.tv2.get_volume()}", 
+            self.status_label = tk.Label(self, text=f"TV1's channel is {self.tv1.get_channel()} and volume level is {self.tv1.get_volume()}\n"
+                                                    f"TV2's channel is {self.tv2.get_channel()} and volume level is {self.tv2.get_volume()}", 
                                                     bg="#181e31", fg="white", font=("Helvetica", 10))
             self.status_label.place(relx=0.5, rely=0.5, anchor=tk.CENTER)
             
