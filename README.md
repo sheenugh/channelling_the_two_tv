@@ -1,4 +1,4 @@
-# channelling the two tv
+# channelling_the_two_tv
 # Goal of this Program:
 Given: A UML Class Diagram below:
 Required: Create a Python Code for creating the Class named TV and a Test Driver program named TestTV that will create two objects from 
