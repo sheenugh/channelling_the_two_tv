@@ -33,8 +33,9 @@ class TV:
         if 1 <= channel <= 120:
             self.channel = channel # - Setting this kind of approach will automatically produce an output that is equal to the number that has been set to the tv's channel in the test driver program.
         else:
-            messagebox.showerror("ERROR", "The channel must be between 1 to 120. Please set a number between this number.")
-    
+            messagebox.showerror("Error", "The channel must be between 1 to 120. Please set a number between this number.")
+            raise ValueError("Invalid Channel")
+        
     # - Instance Method: Get the volume.
     def get_volume(self):
         return self.volume_level # - Gets or return the volume of the TV, where volume = 1.
@@ -44,8 +45,9 @@ class TV:
         if 1<= volume_level <=7:
             self.volume_level = volume_level # - self.volume_level will now equal to the value that has been set on the test driver program.
         else:
-            messagebox.showerror("ERROR", "The channel must be between 1 to 120. Please input a number between this number.")
-    
+            messagebox.showerror("Error", "The channel must be between 1 to 120. Please input a number between this number.")
+            raise ValueError("Invalid volume")
+        
     # - Instance Method: Channel up.
     def channel_up(self): 
         if self.channel < 120:
