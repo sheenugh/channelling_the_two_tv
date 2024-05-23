@@ -37,7 +37,16 @@ class TV:
             raise ValueError("The channel must be between 1 to 120. Please input a number between this number.")
         
     # - Instance Method: Get the volume.
+    def get_volume(self):
+        return self.volume_level # - Gets or return the volume of the TV, where volume = 1.
+    
     # - Instance Method: Set the volume.
+    def set_volume(self, volume_level): # - Putting the 'volume_level' data member to connect on what integer has been put for the tv's volume in the test driver program.
+        if 1<= volume_level <=7:
+            self.volume_level = volume_level # - self.volume_level will now equal to the value that has been set on the test driver program.
+        else:
+            raise ValueError("Error. Please input a number between 1 to 7.")
+    
     # - Instance Method: Channel up.
     # - Instance Method: Channel down.
     # - Instance Method: Volume up.
