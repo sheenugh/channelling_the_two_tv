@@ -6,12 +6,12 @@ Class TV and will produce the following output: <br>
 tv1's channel is 30 and volume level is 3 <br>
 tv2's channel is 3 and volume level is 2 <br>
 <br>
-- INSTANCE VARIABLES
+INSTANCE VARIABLES
 channel : int <br>
 volume_level: int <br>
 on: bool <br>
 <br>
-- VARIABLES FOR EACH INSTANCE METHODS<br>
+VARIABLES FOR EACH INSTANCE METHODS<br>
 TV() <br>
 turn_on(): None <br>
 turn_off(): NOne <br>
