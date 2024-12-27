@@ -1,16 +1,16 @@
-# channelling_the_two_tv
+# Chanelling the Two TV
 # Goal of this Program:
 Given: A UML Class Diagram below:
 Required: Create a Python Code for creating the Class named TV and a Test Driver program named TestTV that will create two objects from 
 Class TV and will produce the following output:
 tv1's channel is 30 and volume level is 3
 tv2's channel is 3 and volume level is 2
-
+<br>
 - INSTANCE VARIABLES
 channel : int
 volume_level: int
 on: bool
-
+<br>
 - VARIABLES FOR EACH INSTANCE METHODS
 TV()
 turn_on(): None
@@ -23,7 +23,7 @@ channel_up(): none
 channel_down(): none 
 volume_up(): none
 volume_down(): none
-
+<br>
 DESCRIPTIONS
 The current channel (1 to 120) of this TV
 The current channel volume level ( 1 to 7) of this  TV
